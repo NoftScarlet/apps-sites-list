@@ -18,4 +18,27 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default ({ data }) => {
+    return (
+        <div>
+            <h1>Index page</h1>
+            <h4>{data.allData.totalCount} Posts</h4>
+            {data.allData.edges.map(({ node }) => (
+                <div key={node.id}>
+                    <h3>
+                        {node.frontmatter.title} <span>—123</span>
+                    </h3>
+                </div>
+            ))}
+        </div>
+    )
+}
+//https://github.com/gatsbyjs/gatsby/blob/master/examples/gatsbygram/gatsby-node.js
+export const query = graphql`
+  {
+    allPostsJson {
+       id
+       title
+    }
+  }
+`

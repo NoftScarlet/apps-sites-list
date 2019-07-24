@@ -1,6 +1,6 @@
-{
-  "data": [
+[
     {
+      "id": "0",
       "title": "Apps and Sites List",
       "link": "piano.uottawa.ca/apps",
       "description": "This page. A list for PianoLab sites and applications.",
@@ -9,9 +9,10 @@
       "implementation": "SSG (Gatsby), Static JSON and GraphQL from gatsby-transformer-json",
       "plan": "Will be actively maintained in the future",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "1",
       "title": "PianoLab Main Website",
       "link": "piano.uottawa.ca",
       "description": "The Lab's main website. Find everything you want to know about the lab here!",
@@ -20,9 +21,10 @@
       "implementation": "WordPress",
       "plan": "Migrate to Flatfile CMS (Grav) and SSG (Gatsby)",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "2",
       "title": "Musician Wellness Centre",
       "link": "piano.uottawa.ca/mwc",
       "description": "Website for Musician Wellness Centre",
@@ -31,9 +33,10 @@
       "implementation": "Plan HTML, CSS and JS",
       "plan": "Migrate to Flatfile CMS (Grav) and SSG (Gatsby); Also a possibility to relocate files to other server",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "3",
       "title": "OVL (Online Video Library)",
       "link": "piano.uottawa.ca/ovl",
       "description": "Online Video Library (for prof.Comeau's course only) and Research Survey management system",
@@ -42,9 +45,10 @@
       "implementation": "Drupal 8 and modules",
       "plan": "Split up the research survey system",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "4",
       "title": "Music Reading Test",
       "link": "piano.uottawa.ca/apps/music-reading-test",
       "description": "A music reading test that shows user the notes to be played, and records their playing as CSV. A usb MIDI keyboard and Chrome browser is required. Can also run as a stand-alone desktop application.",
@@ -53,9 +57,10 @@
       "implementation": "JS, React, Electron, GraphQL",
       "plan": "Finish the GraphQL implementation; write document",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "5",
       "title": "Surgical Training Video, Suturing and Knot Tying",
       "link": "piano.uottawa.ca/apps/knot-tying-suturing",
       "description": "For suturing and knot tying motor skill assesment across pianoists and non- pianoists.",
@@ -64,9 +69,10 @@
       "implementation": "HTML, JS, Google Apps Script",
       "plan": "Migrate from OVL; Is there a way to automate recording?",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "6",
       "title": "Jumping Ball",
       "link": "piano.uottawa.ca/apps/jumping-ball",
       "description": "",
@@ -75,9 +81,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "7",
       "title": "Midi Analysis Tool",
       "link": "piano.uottawa.ca/apps/midi-analyzer",
       "description": "",
@@ -86,9 +93,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "8",
       "title": "Keydown Counter",
       "link": "piano.uottawa.ca/apps/keydown-counter",
       "description": "",
@@ -97,9 +105,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "9",
       "title": "MIDI Recorder",
       "link": "piano.uottawa.ca/apps/midi-recorder",
       "description": "",
@@ -108,9 +117,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "10",
       "title": "Research Survey",
       "link": "piano.uottawa.ca/apps/research-survey",
       "description": "",
@@ -119,9 +129,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "11",
       "title": "Batch Video Audio Converter and Splitter",
       "link": "piano.uottawa.ca/apps/batch-va-converter-splitter",
       "description": "",
@@ -130,9 +141,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "show log": []
+      "show_log": []
     },
     {
+      "id": "12",
       "title": "YouTube Live",
       "link": "piano.uottawa.ca/apps/youtube-live",
       "description": "",
@@ -141,7 +153,6 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "show log": []
+      "show_log": []
     }
-  ]
-}
+]
