@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -22,23 +22,32 @@ export default ({ data }) => {
     return (
         <div>
             <h1>Index page</h1>
-            <h4>{data.allData.totalCount} Posts</h4>
-            {data.allData.edges.map(({ node }) => (
+            <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+            {data.allMarkdownRemark.edges.map(({ node }) => (
                 <div key={node.id}>
                     <h3>
-                        {node.frontmatter.title} <span>—123</span>
+                        {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
                     </h3>
                 </div>
             ))}
         </div>
     )
 }
-//https://github.com/gatsbyjs/gatsby/blob/master/examples/gatsbygram/gatsby-node.js
 export const query = graphql`
-  {
-    allPostsJson {
-       id
-       title
+  query {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+          }
+        }
+      }
     }
   }
 `
+
+//https://itnext.io/reading-data-from-a-json-file-with-gatsby-graphql-572b18ab98a
