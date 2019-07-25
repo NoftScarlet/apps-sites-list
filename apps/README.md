@@ -14,6 +14,6 @@
 
 Yes.
 
-This project uses the SSG Gatsby. It serves data from a static json file under src/data/posts.json
+This project uses the SSG Gatsby. The page pulls data from a static json file under src/data/posts.json
 
 <!-- AUTO-GENERATED-CONTENT:END -->
