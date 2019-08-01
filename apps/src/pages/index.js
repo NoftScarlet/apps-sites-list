@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import {Link, StaticQuery, graphql} from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,14 +10,13 @@ import "../assets/css/nucleo-icons.css";
 
 // reactstrap components
 import {
-    Card,
-    CardHeader,
-    CardBody,
     NavItem,
     NavLink,
     Nav,
     TabContent,
-    TabPane
+    TabPane,
+    Row,
+    Col
 } from "reactstrap";
 
 //https://github.com/gatsbyjs/gatsby/issues/10523#issue-391866891
@@ -26,128 +25,107 @@ class Tester extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            pills: 1
+            vertical: 1,
+            withIcons: 1
         };
     }
+
     toggleTabs = (e, stateName, index) => {
         e.preventDefault();
         this.setState({
             [stateName]: index
         });
     };
+
+    prepareNavs = (data, elemType) => { //helpler function to iterate over object and push elements into array
+        const elemArray = [];
+        switch (elemType) {
+            case "title": {
+                data.allPostsJson.edges.forEach(item =>
+                    elemArray.push(
+                        <NavItem key={(item.node.id)}>
+                            <NavLink
+                                className={classnames({
+                                    active: this.state.withIcons === 1
+                                })}
+                                onClick={e => this.toggleTabs(e, "withIcons", parseInt(item.node.id))}
+                                href="#pablo"
+
+                            >
+                                {item.node.title}
+                            </NavLink>
+                        </NavItem>
+                    )
+                );
+                break;
+            }
+            case "tabpane": {
+                data.allPostsJson.edges.forEach(item =>
+                    elemArray.push(
+                        <TabPane tabId={"withIcons"+item.node.id}>
+                                {item.node.description}
+                        </TabPane>
+                    )
+                );
+                break;
+            }
+            default :
+                console.log("can not create element type - "+elemType);
+                break;
+        }
+
+        return elemArray;
+    };
+
     render() {
         return (
-            <>
-                <Nav className="nav-pills-primary" pills role="tablist">
-                    <NavItem>
-                        <NavLink
-                            className={classnames({
-                                active: this.state.pills === 1
-                            })}
-                            onClick={e => this.toggleTabs(e, "pills", 1)}
-                            href="#pablo"
-                        >
-                            Profile
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink
-                            className={classnames({
-                                active: this.state.pills === 2
-                            })}
-                            onClick={e => this.toggleTabs(e, "pills", 2)}
-                            href="#pablo"
-                        >
-                            Settings
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink
-                            className={classnames({
-                                active: this.state.pills === 3
-                            })}
-                            onClick={e => this.toggleTabs(e, "pills", 3)}
-                            href="#pablo"
-                        >
-                            Options
-                        </NavLink>
-                    </NavItem>
-                </Nav>
-                <TabContent className="tab-space" activeTab={"pills" + this.state.pills}>
-                    <TabPane tabId="pills1">
-                        Collaboratively administrate empowered markets via plug-and-play
-                        networks. Dynamically procrastinate B2C users after installed base
-                        benefits. <br />
-                        <br />
-                        Dramatically visualize customer directed convergence without
-                        revolutionary ROI.
-                    </TabPane>
-                    <TabPane tabId="pills2">
-                        Efficiently unleash cross-media information without cross-media
-                        value. Quickly maximize timely deliverables for real-time schemas.{" "}
-                        <br />
-                        <br />
-                        Dramatically maintain clicks-and-mortar solutions without
-                        functional solutions.
-                    </TabPane>
-                    <TabPane tabId="pills3">
-                        Completely synergize resource taxing relationships via premier
-                        niche markets. Professionally cultivate one-to-one customer
-                        service with robust ideas. <br />
-                        <br />
-                        Dynamically innovate resource-leveling customer service for state
-                        of the art customer service.
-                    </TabPane>
-                </TabContent>
-            </>
+            <StaticQuery // step 1
+                query={
+                    graphql`{
+                      allPostsJson {
+                        edges{
+                          node{
+                            id
+                            title
+                            link
+                            description
+                            type
+                            implementation
+                            plan
+                            source_code
+                          }
+                        }
+                      }
+                    }`
+                }
+                render={data => (
+                    <Layout>
+                        <SEO title="PianoLab Engineering Projects"/>
+                        <>
+                            <Row>
+                                <Col md="4">
+                                    <Nav className="nav-pills-primary nav-pills-icons flex-column" pills>
+                                        {this.prepareNavs(data, "title")}
+                                    </Nav>
+                                </Col>
+                                <Col md="8">
+                                    <TabContent className="tab-space" activeTab={"withIcons" + this.state.withIcons}>
+                                        {this.prepareNavs(data,"tabpane")}
+                                    </TabContent>
+                                </Col>
+                            </Row>
+                        </>
+                        <Link to="/">Go back to the homepage</Link>
+                    </Layout>
+                )}
+            />
         );
     }
 }
 
-
-
-export default () => (
-
-
-    <StaticQuery
-        query={graphql`
-     {
-        allPostsJson {
-          edges{
-            node{
-              id
-              title
-              link
-              description
-              type
-              implementation
-              plan
-              source_code
-          }
-          }
-        }
-     }
-    `}
-        render={data => (
-            <Layout>
-                <SEO title="PianoLab Engineering Projects" />
-                <>
-                    <ul>{getPosts(data)}</ul>
-                </>
-                <Link to="/">Go back to the homepage</Link>
-                <Tester />
-            </Layout>
-        )}
-    />
-);
-
-function getPosts(data) { //helpler function to iterate over object and push elements into array
-    const projectsArray = [];
-    data.allPostsJson.edges.forEach(item=>
-        projectsArray.push(<li key={item.node.title}> {item.node.id +' '+item.node.title } <br />  {item.node.link} <br /> {item.node.description} </li>)
-    );
-    return projectsArray;
-}
+export default Tester;
 
 
 //https://itnext.io/reading-data-from-a-json-file-with-gatsby-graphql-572b18ab98a
+
+//Pipeline: GraphQL query => get data => send into component as props => Loop throught data object to create elements => Render
