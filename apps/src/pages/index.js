@@ -25,8 +25,8 @@ class Tester extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            vertical: 1,
-            withIcons: 1
+            vertical: 0,
+            withIcons: 0
         };
     }
 
@@ -46,7 +46,7 @@ class Tester extends React.Component {
                         <NavItem key={(item.node.id)}>
                             <NavLink
                                 className={classnames({
-                                    active: this.state.withIcons === 1
+                                    active: this.state.withIcons === parseInt(item.node.id)
                                 })}
                                 onClick={e => this.toggleTabs(e, "withIcons", parseInt(item.node.id))}
                                 href="#pablo"
@@ -62,8 +62,14 @@ class Tester extends React.Component {
             case "tabpane": {
                 data.allPostsJson.edges.forEach(item =>
                     elemArray.push(
-                        <TabPane tabId={"withIcons"+item.node.id}>
-                                {item.node.description}
+                        <TabPane tabId={"withIcons"+parseInt(item.node.id)}>
+                            <h4 color="black">Description</h4>{item.node.description ? item.node.description : "To be added soon!"} <br /><br />
+                            <h4 color="black">Link</h4><a href={item.node.link ? item.node.link : "#"}>{item.node.link ? item.node.link : "To be added soon!"}</a> <br /><br />
+                            <h4 color="black">Type</h4>{item.node.type ? item.node.type : "To be added soon!"} <br /><br />
+                            <h4 color="black">Implementation Method:</h4>{item.node.implementation? item.node.implementation : "To be added soon!"} <br /><br />
+                            <h4 color="black">Source Code Location</h4>{item.node.source_code ? item.node.source_code : "To be added soon!"} <br /><br />
+                            <h4 color="black">Current Status and Plan</h4>{item.node.plan ? item.node.plan : "To be added soon!"} <br /><br />
+                            <h4 color="black">Change Log</h4>{item.node.source_code ? item.node.source_code : "To be added soon!"} <br /><br />
                         </TabPane>
                     )
                 );
