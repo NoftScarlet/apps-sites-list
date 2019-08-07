@@ -166,7 +166,7 @@ export default Tester;
 
 //https://itnext.io/reading-data-from-a-json-file-with-gatsby-graphql-572b18ab98a
 
-//Pipeline: GraphQL query => get data => send into component as props => Loop throught data object to create elements => Render
+//Pipeline: GraphQL query => get data, for both texts and files => send data object into helper function => Loop throught data object to create elements => Render
 
 //https://stackoverflow.com/questions/52574783/gatsby-image-path-from-json
 //https://www.gatsbyjs.org/packages/gatsby-image/#two-types-of-responsive-images
