@@ -1,6 +1,6 @@
 [
     {
-      "id": "0",
+      "id": "1",
       "title": " Sites List",
       "link": "piano.uottawa.ca/apps",
       "description": "This page. A list for PianoLab sites and applications.",
@@ -17,7 +17,7 @@
       "author(s)": ""
     },
     {
-      "id": "1",
+      "id": "0",
       "title": "PianoLab Main Website",
       "link": "piano.uottawa.ca",
       "description": "The Lab's main website. Find everything you want to know about the lab here!",
@@ -27,8 +27,8 @@
       "plan": "Migrate to Flatfile CMS (Grav) and SSG (Gatsby)",
       "source_code": "",
       "file": {
-        "src": "../images/apps-sites-list.png",
-        "name": "App Site Snapshot"
+        "src": "../images/pianolab-website.png",
+        "name": "PianoLab Website Snapshotx"
       },
       "show_logs": "",
       "author(s)": ""
@@ -44,8 +44,8 @@
       "plan": "Migrate to Flatfile CMS (Grav) and SSG (Gatsby); Also a possibility to relocate files to other server",
       "source_code": "",
       "file": {
-        "src": "../images/apps-sites-list.png",
-        "name": "App Site Snapshot"
+        "src": "../images/mwc.png",
+        "name": "MWC Snapshot"
       },
       "show_logs": "",
       "author(s)": ""
@@ -61,8 +61,8 @@
       "plan": "Split up the research survey system",
       "source_code": "",
       "file": {
-        "src": "../images/apps-sites-list.png",
-        "name": "App Site Snapshot"
+        "src": "../images/ovl.png",
+        "name": "OVL Snapshot"
       },
       "show_logs": "",
       "author(s)": ""
@@ -120,7 +120,7 @@
     },
     {
       "id": "7",
-      "title": "Midi Analysis Tool",
+      "title": "MIDI Analysis Tool",
       "link": "piano.uottawa.ca/apps/midi-analyzer",
       "description": "",
       "location": "",
