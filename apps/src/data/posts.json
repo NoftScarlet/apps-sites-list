@@ -9,7 +9,10 @@
       "implementation": "SSG (Gatsby), Static JSON and GraphQL from gatsby-transformer-json",
       "plan": "Will be actively maintained in the future",
       "source_code": "https://github.com/pianolab-uottawa/apps-sites-list",
-      "img": "../images/apps-sites-list.png",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "https://api.github.com/repos/pianolab-uottawa/apps-site-list/commits",
       "author(s)": ""
     },
@@ -23,7 +26,10 @@
       "implementation": "WordPress",
       "plan": "Migrate to Flatfile CMS (Grav) and SSG (Gatsby)",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     },
@@ -37,7 +43,10 @@
       "implementation": "Plan HTML, CSS and JS",
       "plan": "Migrate to Flatfile CMS (Grav) and SSG (Gatsby); Also a possibility to relocate files to other server",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     },
@@ -51,7 +60,10 @@
       "implementation": "Drupal 8 and modules",
       "plan": "Split up the research survey system",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     },
@@ -65,7 +77,10 @@
       "implementation": "JS, React, Electron, GraphQL",
       "plan": "Finish the GraphQL implementation; write document",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     },
@@ -79,7 +94,10 @@
       "implementation": "HTML, JS, Google Apps Script",
       "plan": "Migrate from OVL; Is there a way to automate recording?",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     },
@@ -93,7 +111,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     },
@@ -107,7 +128,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     },
@@ -121,7 +145,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     },
@@ -135,7 +162,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     },
@@ -149,7 +179,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     },
@@ -163,7 +196,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     },
@@ -177,7 +213,10 @@
       "implementation": "",
       "plan": "",
       "source_code": "",
-      "img": "",
+      "file": {
+        "src": "../images/apps-sites-list.png",
+        "name": "App Site Snapshot"
+      },
       "show_logs": "",
       "author(s)": ""
     }

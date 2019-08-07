@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import classnames from "classnames";
 import 'bootstrap/dist/css/bootstrap.css';
-import SiteListImg from "../images/apps-sites-list.png";
+import Img from "gatsby-image";
 
 
 import {
@@ -68,7 +68,7 @@ class Tester extends React.Component {
                     elemArray.push(
                         <TabPane key={(item.node.id)} tabId={parseInt(item.node.id)}>
 
-                            <img src={item.node.img} />
+                            <Img fluid={item.node.file.src.childImageSharp.fluid} />
                             <h4 color="black">Description</h4>{item.node.description ? item.node.description : "To be added soon!"}
                             <br/><br/>
                             <h4 color="black">Link</h4><a
@@ -100,9 +100,14 @@ class Tester extends React.Component {
 
     render() {
         return (
+
             <StaticQuery // step 1
+
                 query={
-                    graphql`{
+                    graphql`
+
+
+                    {
                       allPostsJson {
                         edges{
                           node{
@@ -114,8 +119,17 @@ class Tester extends React.Component {
                             implementation
                             plan
                             source_code
-                            img
                             show_logs
+                            file {
+                              name
+                              src {
+                                childImageSharp {
+                                  fluid {
+                                    ...GatsbyImageSharpFluid
+                                  }
+                                }
+                              }
+                            }
                           }
                         }
                       }
