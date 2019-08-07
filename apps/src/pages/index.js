@@ -9,13 +9,10 @@ import Img from "gatsby-image";
 
 
 import {
-    NavItem,
-    NavLink,
-    Nav,
-    TabContent,
-    TabPane,
-    Row,
-    Col
+    NavItem, NavLink, Nav,
+    TabContent, TabPane,
+    Row, Col,
+    Button, Form, FormGroup, Label, Input, FormText
 } from "reactstrap";
 
 
@@ -37,6 +34,25 @@ class Tester extends React.Component {
         });
     };
 
+    handleKeydownFilter = (evt) => {
+        let navItems = document.querySelectorAll(".nav-pills .nav-item");
+        let val = evt.target.value.toLowerCase();
+        console.log(val);
+
+        navItems.forEach(item=>{
+            if (val === "") {
+                item.style.display="list-item"
+            }
+            else if (item.textContent.toLowerCase().indexOf(val)>-1) {
+                item.style.display ="list-item"
+            }
+            else {
+                item.style.display="none"
+            }
+        });
+
+    };
+
     prepareNavs = (data, elemType) => { //helpler function to iterate over object and push elements into array
 
         const elemArray = [];
@@ -44,7 +60,7 @@ class Tester extends React.Component {
             case "title": {
                 data.allPostsJson.edges.forEach(item =>
                     elemArray.push(
-                        <NavItem key={(item.node.id)} style={{width: "50%"}}>
+                        <NavItem key={(item.node.id)} style={{width: "50%"}} data-tags={item.node.description}>
                             <NavLink
                                 style={{height: "140px"}}
                                 className={classnames({
@@ -141,6 +157,11 @@ class Tester extends React.Component {
                         <>
                             <Row>
                                 <Col md="6">
+                                    <Form>
+                                        <Label>Filter</Label>
+                                        <Input type="text" name="text" id="filter-s" placeholder="" onChange={e => this.handleKeydownFilter(e)}/>
+                                    </Form>
+
                                     <Nav pills>
                                         {this.prepareNavs(data, "title")}
                                     </Nav>
