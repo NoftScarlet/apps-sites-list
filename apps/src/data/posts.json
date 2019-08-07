@@ -8,9 +8,10 @@
       "type": "Static Page",
       "implementation": "SSG (Gatsby), Static JSON and GraphQL from gatsby-transformer-json",
       "plan": "Will be actively maintained in the future",
-      "source_code": "",
-      "img": "",
-      "show_log": []
+      "source_code": "https://github.com/pianolab-uottawa/apps-sites-list",
+      "img": "../images/apps-sites-list.png",
+      "show_logs": "https://api.github.com/repos/pianolab-uottawa/apps-site-list/commits",
+      "author(s)": ""
     },
     {
       "id": "1",
@@ -23,7 +24,8 @@
       "plan": "Migrate to Flatfile CMS (Grav) and SSG (Gatsby)",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     },
     {
       "id": "2",
@@ -36,7 +38,8 @@
       "plan": "Migrate to Flatfile CMS (Grav) and SSG (Gatsby); Also a possibility to relocate files to other server",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     },
     {
       "id": "3",
@@ -49,7 +52,8 @@
       "plan": "Split up the research survey system",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     },
     {
       "id": "4",
@@ -62,11 +66,12 @@
       "plan": "Finish the GraphQL implementation; write document",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     },
     {
       "id": "5",
-      "title": "Surgical Training Video, Suturing and Knot Tying",
+      "title": "Surgical Training",
       "link": "piano.uottawa.ca/apps/knot-tying-suturing",
       "description": "For suturing and knot tying motor skill assesment across pianoists and non- pianoists.",
       "location": "cws-p103.intra pianolab/apps",
@@ -75,7 +80,8 @@
       "plan": "Migrate from OVL; Is there a way to automate recording?",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     },
     {
       "id": "6",
@@ -88,7 +94,8 @@
       "plan": "",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     },
     {
       "id": "7",
@@ -101,7 +108,8 @@
       "plan": "",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     },
     {
       "id": "8",
@@ -114,7 +122,8 @@
       "plan": "",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     },
     {
       "id": "9",
@@ -127,7 +136,8 @@
       "plan": "",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     },
     {
       "id": "10",
@@ -140,7 +150,8 @@
       "plan": "",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     },
     {
       "id": "11",
@@ -153,7 +164,8 @@
       "plan": "",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     },
     {
       "id": "12",
@@ -166,6 +178,7 @@
       "plan": "",
       "source_code": "",
       "img": "",
-      "show_log": []
+      "show_logs": "",
+      "author(s)": ""
     }
 ]
